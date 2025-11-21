@@ -13,7 +13,7 @@ export function MapSection() {
         <div className="max-w-5xl mx-auto">
           <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
             <iframe
-              src="https://maps.google.com/maps?q=80+Aston+Terrace,+Leeds+LS13+2EB,+UK&t=m&z=17&output=embed"
+              src="https://www.google.com/maps?q=53.8075118,-1.6194430&z=17&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
