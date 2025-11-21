@@ -76,7 +76,7 @@ export function Hero() {
             </div>
             {/* Floating Card */}
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
-              <p className="text-3xl font-bold text-primary">£50+</p>
+              <p className="text-3xl font-bold text-primary">£100+</p>
               <p className="text-sm text-muted-foreground">Starting from per month</p>
             </div>
           </div>
