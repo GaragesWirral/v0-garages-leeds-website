@@ -16,12 +16,35 @@ export function QuickEnquiry() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "171ae48c-ae7b-4b76-a2e1-0af60ee2cc3b",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      })
+      
+      const result = await response.json()
+      if (result.success) {
+        alert("Thank you! We'll be in touch within 24 hours.")
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      } else {
+        alert("Something went wrong. Please try again or call us directly.")
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again or call us directly.")
+    }
   }
-
   return (
     <section id="enquiry" className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
