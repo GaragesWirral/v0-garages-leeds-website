@@ -4,7 +4,7 @@ const faqs = [
   {
     question: "How much does it cost to rent a garage in Leeds?",
     answer:
-      "Our garage rental prices in Leeds start from £50 per month, depending on the size and location. We offer competitive rates for lock-up garages across West Yorkshire with flexible payment terms.",
+      "Our garage rental prices in Leeds start from £100 per month, depending on the size and location. We offer competitive rates for lock-up garages across West Yorkshire with flexible payment terms.",
   },
   {
     question: "Where are your garages located in Leeds?",
