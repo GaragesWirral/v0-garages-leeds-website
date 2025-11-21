@@ -20,8 +20,14 @@ export const metadata: Metadata = {
     type: "website",
   },
     generator: 'v0.app'
-    robots: 'index, follow',
-    canonical: 'https://www.garagesleeds.co.uk',
+}
+
+export const robots = {
+  index: true,
+  follow: true,
+  "max-image-preview": "large",
+  "max-snippet": -1,
+  "max-video-preview": -1,
 }
 
 export default function RootLayout({
@@ -31,6 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      
       <body className={`${inter.className} font-sans antialiased`}>
         {children}
         <Analytics />
