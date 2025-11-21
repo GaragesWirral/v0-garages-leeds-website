@@ -1,7 +1,5 @@
 "use client"
-
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -16,9 +14,9 @@ export function QuickEnquiry() {
     message: "",
   })
 
-const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+   
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -33,7 +31,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           message: formData.message,
         }),
       })
-      
+     
       const result = await response.json()
       if (result.success) {
         alert("Thank you! We'll be in touch within 24 hours.")
@@ -45,6 +43,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       alert("Something went wrong. Please try again or call us directly.")
     }
   }
+
   return (
     <section id="enquiry" className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -55,7 +54,6 @@ const handleSubmit = async (e: React.FormEvent) => {
               Fill out the form below and we'll get back to you within 24 hours with available garages in Leeds.
             </p>
           </div>
-
           <div className="bg-secondary/50 p-8 lg:p-12 rounded-2xl shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -63,7 +61,6 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <Label htmlFor="name">Full Name *</Label>
                   <Input
                     id="name"
-                    placeholder="John Smith"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -74,41 +71,34 @@ const handleSubmit = async (e: React.FormEvent) => {
                   <Input
                     id="phone"
                     type="tel"
-                    placeholder="07519 667044"
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
                 </div>
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address *</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
               </div>
-
               <div className="space-y-2">
                 <Label htmlFor="message">What are you looking for?</Label>
                 <Textarea
                   id="message"
-                  placeholder="Tell us about your garage requirements..."
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
               </div>
-
               <Button type="submit" size="lg" className="w-full text-lg h-14">
                 Request a Quote
               </Button>
-
               <p className="text-sm text-muted-foreground text-center">
                 By submitting this form, you agree to be contacted about garage rentals in Leeds.
               </p>
