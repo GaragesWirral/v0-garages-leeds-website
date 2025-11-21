@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     type: "website",
   },
     generator: 'v0.app'
+    robots: 'index, follow',
+    canonical: 'https://www.garagesleeds.co.uk',
 }
 
 export default function RootLayout({
