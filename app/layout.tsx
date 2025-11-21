@@ -18,17 +18,13 @@ export const metadata: Metadata = {
     description:
       "Garages Leeds offers secure, affordable lock-up garages to rent in Leeds. Whether you need extra storage space or a safe place to park.",
     type: "website",
-  }  metadataBase: new URL('https://www.garagesleeds.co.uk'),
-    ],
-    generator: 'v0.app'
-}
-
-export const robots = {
-  index: true,
-  follow: true,
-  "max-image-preview": "large",
-  "max-snippet": -1,
-  "max-video-preview": -1,
+  },
+  metadataBase: new URL('https://www.garagesleeds.co.uk'),
+  generator: 'v0.app',
+  // Added for indexing: Allows search engines to index and follow links
+  robots: 'index, follow',
+  // Added canonical URL to specify the preferred version of the page
+  canonical: 'https://www.garagesleeds.co.uk/'
 }
 
 export default function RootLayout({
@@ -38,7 +34,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body className={`${inter.className} font-sans antialiased`}>
         {children}
         <Analytics />
