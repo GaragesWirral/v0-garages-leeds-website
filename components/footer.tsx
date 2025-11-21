@@ -70,11 +70,7 @@ export function Footer() {
                   07519 667044
                 </a>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-5 h-5 flex-shrink-0" />
-             
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>
