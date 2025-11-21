@@ -23,8 +23,10 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   // Added for indexing: Allows search engines to index and follow links
   robots: 'index, follow',
-  // Added canonical URL to specify the preferred version of the page
-  canonical: 'https://www.garagesleeds.co.uk/'
+  // Corrected canonical under alternates to ensure it renders properly
+  alternates: {
+    canonical: 'https://www.garagesleeds.co.uk/'
+  }
 }
 
 export default function RootLayout({
