@@ -72,8 +72,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <a href="mailto:info@garagesleeds.co.uk" className="hover:text-white transition-colors">
-                  info@garagesleeds.co.uk
+             
                 </a>
               </li>
             </ul>
