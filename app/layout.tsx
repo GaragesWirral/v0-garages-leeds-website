@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     description:
       "Garages Leeds offers secure, affordable lock-up garages to rent in Leeds. Whether you need extra storage space or a safe place to park.",
     type: "website",
-  },
+  }  metadataBase: new URL('https://www.garagesleeds.co.uk'),
+    ],
     generator: 'v0.app'
 }
 
